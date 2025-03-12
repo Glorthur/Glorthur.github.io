@@ -9,6 +9,21 @@
     <meta name="author" content="Glorthur">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Fix for loader issue -->
+    <script>
+        // This will make sure the loader disappears even if there's an issue
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const loader = document.querySelector('.loader-wrapper');
+                if (loader) {
+                    loader.style.opacity = "0";
+                    loader.style.visibility = "hidden";
+                }
+            }, 1000); // Hide after 1 second
+        });
+    </script>
+    
     <style>
         :root {
             --primary: #2C3E50;
@@ -629,7 +644,7 @@
             <h1>Glorthur</h1>
             <h2>Data Analyst & Insights Specialist</h2>
             <div class="datetime-display">
-                Current Time (UTC): 2025-03-12 19:08:24
+                Current Time (UTC): 2025-03-12 19:19:01
             </div>
         </div>
     </header>
@@ -923,4 +938,6 @@ ORDER BY date, store_id;</code></pre>
                             <h4>Analysis & Visualization</h4>
                             <p>Performed time series decomposition to identify seasonal patterns and built visualizations showing sales trends by store, category, and time period.</p>
                             <div class="case-viz">
-                                <img src="https://via.placeholder.com/800x400?text
+                                <img src="https://via.placeholder.com/800x400?text=Time+Series+Analysis" alt="Time Series Analysis Chart">
+                            </div>
+                        
