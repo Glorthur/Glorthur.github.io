@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Analyst Portfolio</title>
+    <title>Glorthur | Data Analyst Portfolio</title>
+    <meta name="description" content="Data Analysis specialist with expertise in SQL, Python, Tableau, and Power BI. View my projects, skills, and experience in data visualization and business intelligence.">
+    <meta name="keywords" content="data analyst, SQL, Python, PowerBI, data visualization, business intelligence, analytics portfolio">
+    <meta name="author" content="Glorthur">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         :root {
-            --primary: #2C3E50;
-            --secondary: #3498DB;
-            --accent: #2ECC71;
-            --light: #ECF0F1;
-            --dark: #2C3E50;
-            --text: #333333;
+            --primary: #1E3A8A;          /* Darker blue */
+            --primary-light: #2563EB;    /* Brighter blue */
+            --secondary: #10B981;        /* Emerald green */
+            --accent: #F59E0B;           /* Amber accent */
+            --light: #F3F4F6;            /* Light gray background */
+            --dark: #111827;             /* Near black */
+            --text: #374151;             /* Dark gray text */
+            --text-light: #6B7280;       /* Medium gray text */
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --highlight-bg: #ECFDF5;     /* Light green highlight background */
+            --highlight-text: #10B981;   /* Green highlight text */
         }
         
         * {
@@ -37,7 +44,7 @@
         
         /* Header */
         header {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
             padding: 60px 0;
             text-align: center;
@@ -53,6 +60,16 @@
             font-weight: normal;
             margin-bottom: 20px;
             opacity: 0.9;
+        }
+        
+        .datetime-display {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            display: inline-block;
         }
         
         /* Navigation */
@@ -79,10 +96,21 @@
             color: var(--primary);
             font-weight: 500;
             transition: color 0.3s;
+            position: relative;
         }
         
         nav a:hover {
             color: var(--secondary);
+        }
+        
+        nav a:hover:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary);
         }
         
         /* Sections */
@@ -95,6 +123,34 @@
             margin-bottom: 40px;
             color: var(--primary);
             font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+        
+        .section-title-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        /* Highlight text */
+        .highlight {
+            background-color: var(--highlight-bg);
+            color: var(--highlight-text);
+            padding: 0 5px;
+            border-radius: 3px;
+            font-weight: 600;
         }
         
         /* About */
@@ -114,11 +170,73 @@
             width: 100%;
             max-width: 250px;
             box-shadow: var(--shadow);
+            border: 3px solid var(--secondary);
         }
         
         .about-text h3 {
             color: var(--secondary);
             margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .data-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 40px 0 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Resume Download */
+        .resume-download {
+            text-align: center;
+            margin: 30px 0 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+        
+        .download-btn i {
+            margin-right: 8px;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         /* Skills */
@@ -137,12 +255,21 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
         }
         
         .skill-category h3 {
-            color: var(--secondary);
+            color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.3rem;
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--secondary);
         }
         
         .skill-bar {
@@ -167,8 +294,8 @@
             top: 0;
             left: 0;
             height: 100%;
-            background-color: var(--secondary);
             border-radius: 5px;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--primary-light) 100%);
         }
         
         /* Projects */
@@ -187,21 +314,39 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s;
+            border: 1px solid #e5e7eb;
         }
         
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         }
         
         .project-image {
             height: 200px;
             overflow: hidden;
+            position: relative;
+        }
+        
+        .project-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
         }
         
         .project-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
         }
         
         .project-content {
@@ -211,6 +356,7 @@
         .project-content h3 {
             margin-bottom: 10px;
             color: var(--primary);
+            font-size: 1.25rem;
         }
         
         .project-tags {
@@ -221,7 +367,7 @@
         }
         
         .project-tag {
-            background-color: var(--secondary);
+            background-color: var(--primary-light);
             color: white;
             padding: 3px 8px;
             border-radius: 4px;
@@ -230,15 +376,21 @@
         
         .project-links {
             margin-top: 15px;
+            display: flex;
+            gap: 10px;
         }
         
         .project-links a {
             text-decoration: none;
             color: var(--primary);
-            margin-right: 15px;
             display: inline-flex;
             align-items: center;
             font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .project-links a:hover {
+            color: var(--secondary);
         }
         
         .project-links i {
@@ -265,16 +417,33 @@
             box-shadow: var(--shadow);
             width: 250px;
             transition: transform 0.3s;
+            border-bottom: 3px solid var(--primary);
         }
         
         .contact-option:hover {
             transform: translateY(-5px);
+            border-bottom-color: var(--secondary);
         }
         
         .contact-option i {
             font-size: 2rem;
-            color: var(--secondary);
+            color: var(--primary);
             margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+        
+        .contact-option:hover i {
+            color: var(--secondary);
+        }
+        
+        .contact-option a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-option a:hover {
+            color: var(--secondary);
         }
         
         /* Footer */
@@ -293,11 +462,12 @@
             color: white;
             font-size: 1.5rem;
             margin: 0 10px;
-            transition: color 0.3s;
+            transition: all 0.3s;
         }
         
         .social-links a:hover {
-            color: var(--accent);
+            color: var(--secondary);
+            transform: translateY(-3px);
         }
         
         /* Responsive */
@@ -327,8 +497,11 @@
     <!-- Header -->
     <header id="top">
         <div class="container">
-            <h1>Your Name</h1>
+            <h1>Glorthur</h1>
             <h2>Data Analyst & Insights Specialist</h2>
+            <div class="datetime-display">
+                Current Time (UTC): 2025-03-12 19:36:22
+            </div>
         </div>
     </header>
     
@@ -345,16 +518,45 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About Me</h2>
+            <div class="section-title-container">
+                <h2>About Me</h2>
+            </div>
             <div class="about-content">
                 <div class="about-image">
                     <img src="https://via.placeholder.com/300" alt="Profile Photo">
                 </div>
                 <div class="about-text">
                     <h3>Transforming Data into Actionable Insights</h3>
-                    <p>Welcome to my portfolio! I'm a data analyst specializing in transforming complex data into clear, actionable business intelligence. With expertise in SQL, Python, and data visualization, I help organizations make data-driven decisions.</p>
+                    <p>Welcome to my portfolio! I'm a <span class="highlight">data analyst</span> specializing in transforming complex data into clear, actionable business intelligence. With expertise in <span class="highlight">SQL</span>, <span class="highlight">Python</span>, and <span class="highlight">data visualization</span>, I help organizations make <span class="highlight">data-driven decisions</span>.</p>
                     <p>My approach combines strong technical skills with business acumen to deliver insights that drive real-world impact. I'm passionate about finding patterns in data that tell compelling stories and lead to meaningful business outcomes.</p>
                 </div>
+            </div>
+            
+            <!-- Data Stats -->
+            <div class="data-stats">
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15M+</div>
+                    <div class="stat-label">Data Points Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">92%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+            
+            <!-- Resume Download -->
+            <div class="resume-download">
+                <a href="assets/resume.pdf" download class="download-btn">
+                    <i class="fas fa-file-download"></i> Download Resume
+                </a>
             </div>
         </div>
     </section>
@@ -362,7 +564,9 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2>Technical Skills</h2>
+            <div class="section-title-container">
+                <h2>Technical Skills</h2>
+            </div>
             <div class="skill-categories">
                 <div class="skill-category">
                     <h3>Data Analysis</h3>
@@ -396,6 +600,16 @@
                             <div class="skill-percent" style="width: 85%"></div>
                         </div>
                     </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Hypothesis Testing</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 80%"></div>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="skill-category">
@@ -403,7 +617,7 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Tableau</span>
+                            <span>Power BI</span>
                             <span>85%</span>
                         </div>
                         <div class="skill-level">
@@ -413,21 +627,21 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Power BI</span>
-                            <span>80%</span>
+                            <span>Excel</span>
+                            <span>90%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-percent" style="width: 80%"></div>
+                            <div class="skill-percent" style="width: 90%"></div>
                         </div>
                     </div>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
                             <span>Data Storytelling</span>
-                            <span>90%</span>
+                            <span>92%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-percent" style="width: 90%"></div>
+                            <div class="skill-percent" style="width: 92%"></div>
                         </div>
                     </div>
                 </div>
@@ -447,17 +661,7 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>R</span>
-                            <span>75%</span>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 75%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-bar">
-                        <div class="skill-name">
-                            <span>Data Cleaning</span>
+                            <span>SQL</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-level">
@@ -472,7 +676,9 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2>Featured Projects</h2>
+            <div class="section-title-container">
+                <h2>Featured Projects</h2>
+            </div>
             <div class="project-cards">
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -481,11 +687,11 @@
                     </div>
                     <div class="project-content">
                         <h3>Retail Customer Segmentation Analysis</h3>
-                        <p>Identified 4 distinct customer segments leading to a 23% improvement in targeted campaign performance.</p>
+                        <p>Identified <span class="highlight">4 distinct customer segments</span> leading to a <span class="highlight">23% improvement</span> in targeted campaign performance.</p>
                         <div class="project-tags">
                             <span class="project-tag">SQL</span>
                             <span class="project-tag">Python</span>
-                            <span class="project-tag">Tableau</span>
+                            <span class="project-tag">Power BI</span>
                         </div>
                         <div class="project-links">
                             <a href="#"><i class="fas fa-eye"></i> View Details</a>
@@ -501,10 +707,10 @@
                     </div>
                     <div class="project-content">
                         <h3>Sales Forecasting Dashboard</h3>
-                        <p>Built an interactive dashboard that predicted quarterly sales within 4% margin of error.</p>
+                        <p>Built an interactive dashboard that predicted quarterly sales within <span class="highlight">4% margin of error</span>.</p>
                         <div class="project-tags">
                             <span class="project-tag">Power BI</span>
-                            <span class="project-tag">R</span>
+                            <span class="project-tag">Python</span>
                             <span class="project-tag">Excel</span>
                         </div>
                         <div class="project-links">
@@ -521,7 +727,7 @@
                     </div>
                     <div class="project-content">
                         <h3>Market Basket Analysis</h3>
-                        <p>Applied association rule mining to identify product affinities, increasing cross-sell revenue by 15%.</p>
+                        <p>Applied <span class="highlight">association rule mining</span> to identify product affinities, increasing cross-sell revenue by <span class="highlight">15%</span>.</p>
                         <div class="project-tags">
                             <span class="project-tag">Python</span>
                             <span class="project-tag">SQL</span>
@@ -540,7 +746,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Get In Touch</h2>
+            <div class="section-title-container">
+                <h2>Get In Touch</h2>
+            </div>
             <div class="contact-options">
                 <div class="contact-option">
                     <i class="fas fa-envelope"></i>
@@ -572,7 +780,7 @@
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Glorthur. All rights reserved.</p>
         </div>
     </footer>
     
