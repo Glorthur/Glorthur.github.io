@@ -51,8 +51,9 @@
         }
         
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3.2rem; /* Increased font size */
             margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         header h2 {
@@ -136,7 +137,7 @@
             transform: translateX(-50%);
             width: 60px;
             height: 3px;
-            background-color: var(--secondary);
+            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
         }
         
         .section-title-container {
@@ -181,15 +182,18 @@
         
         .data-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* Changed to 2 columns */
+            gap: 30px; /* Increased gap */
             margin: 40px 0 20px;
+            max-width: 600px; /* Added max-width to center the 2 cards */
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .stat-card {
             background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
             color: white;
-            padding: 20px;
+            padding: 25px; /* Increased padding */
             border-radius: 8px;
             text-align: center;
             box-shadow: var(--shadow);
@@ -220,7 +224,7 @@
         .download-btn {
             display: inline-block;
             padding: 12px 25px;
-            background-color: var(--secondary);
+            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
             color: white;
             border-radius: 30px;
             font-weight: 600;
@@ -234,7 +238,7 @@
         }
         
         .download-btn:hover {
-            background-color: var(--primary);
+            background: linear-gradient(90deg, var(--primary-light), var(--secondary));
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
@@ -255,8 +259,20 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: var(--shadow);
-            border-top: 4px solid var(--primary);
             transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
+            width: 100%; /* Adjusted from 100% to a more balanced width */
         }
         
         .skill-category:hover {
@@ -386,7 +402,7 @@
         }
         
         .project-tag {
-            background-color: var(--primary-light);
+            background: linear-gradient(90deg, var(--primary-light), var(--primary));
             color: white;
             padding: 3px 8px;
             border-radius: 4px;
@@ -437,12 +453,26 @@
             box-shadow: var(--shadow);
             width: 250px;
             transition: transform 0.3s;
-            border-bottom: 3px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-option::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
         
         .contact-option:hover {
             transform: translateY(-5px);
-            border-bottom-color: var(--secondary);
+        }
+        
+        .contact-option:hover::after {
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
         }
         
         .contact-option i {
@@ -468,7 +498,7 @@
         
         /* Footer */
         footer {
-            background-color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
             text-align: center;
             padding: 30px 0;
@@ -514,6 +544,10 @@
             .project-image {
                 height: 300px;
             }
+            
+            header h1 {
+                font-size: 2.8rem; /* Slightly smaller on mobile */
+            }
         }
     </style>
 </head>
@@ -524,7 +558,7 @@
             <h1>Gloria Arthur</h1>
             <h2>Data Analyst & Insights Specialist</h2>
             <div class="datetime-display">
-                Current Time (UTC): 2025-03-12 20:47:40
+                Current Time (UTC): 2025-03-12 21:05:07
             </div>
         </div>
     </header>
@@ -556,23 +590,15 @@
                 </div>
             </div>
             
-            <!-- Data Stats -->
+            <!-- Data Stats - Changed to show only 2 cards -->
             <div class="data-stats">
                 <div class="stat-card">
-                    <div class="stat-number">5+</div>
+                    <div class="stat-number">2+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">20+</div>
+                    <div class="stat-number">5</div>
                     <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">15M+</div>
-                    <div class="stat-label">Data Points Analyzed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">92%</div>
-                    <div class="stat-label">Client Satisfaction</div>
                 </div>
             </div>
             
