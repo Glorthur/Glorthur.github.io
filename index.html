@@ -3,154 +3,594 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Data Analyst Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --secondary: #3498DB;
+            --accent: #2ECC71;
+            --light: #ECF0F1;
+            --dark: #2C3E50;
+            --text: #333333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            padding: 15px 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        /* About */
+        .about {
+            background-color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image img {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text h3 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        /* Skills */
+        .skills {
+            background-color: var(--light);
+        }
+        
+        .skill-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .skill-category h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .skill-bar {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .skill-level {
+            background-color: #e9ecef;
+            height: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .skill-percent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: var(--secondary);
+            border-radius: 5px;
+        }
+        
+        /* Projects */
+        .projects {
+            background-color: white;
+        }
+        
+        .project-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .project-tag {
+            background-color: var(--secondary);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .project-links {
+            margin-top: 15px;
+        }
+        
+        .project-links a {
+            text-decoration: none;
+            color: var(--primary);
+            margin-right: 15px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .project-links i {
+            margin-right: 5px;
+        }
+        
+        /* Contact */
+        .contact {
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-option {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .contact-option:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-option i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-image {
+                display: flex;
+                justify-content: center;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .project-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <h2>Data Analyst & Insights Specialist</h2>
-        <p>Transforming complex data into actionable business intelligence</p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <header id="top">
+        <div class="container">
+            <h1>Your Name</h1>
+            <h2>Data Analyst & Insights Specialist</h2>
+        </div>
     </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Driving Business Decisions Through Data</h2>
-            <p>I specialize in business intelligence analytics with expertise in SQL, Python, and data visualization tools.</p>
-            <div class="cta-buttons">
-                <a href="portfolio.html" class="cta-button">View My Work</a>
-                <a href="contact.html" class="cta-button secondary">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <!-- Replace with your image -->
-            <img src="assets/images/data-visualization.png" alt="Data visualization graphic">
-        </div>
-    </section>
-
-    <section class="featured-projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <!-- Project Card 1 -->
-            <article class="project-card">
-                <div class="project-header">
-                    <h3>Retail Customer Segmentation Analysis</h3>
-                    <div class="tools-used">
-                        <span class="tool">SQL</span>
-                        <span class="tool">Python</span>
-                        <span class="tool">Tableau</span>
-                    </div>
+    
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/300" alt="Profile Photo">
                 </div>
-                <div class="project-content">
-                    <div class="visualization">
-                        <img src="assets/images/projects/segmentation-viz.png" alt="Customer segmentation visualization">
-                    </div>
-                    <p>Identified 4 distinct customer segments leading to a 23% improvement in targeted campaign performance.</p>
-                    <a href="portfolio.html#project1" class="project-link">View Details</a>
-                </div>
-            </article>
-            
-            <!-- Project Card 2 -->
-            <article class="project-card">
-                <div class="project-header">
-                    <h3>Sales Forecasting Dashboard</h3>
-                    <div class="tools-used">
-                        <span class="tool">Power BI</span>
-                        <span class="tool">R</span>
-                        <span class="tool">Excel</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="visualization">
-                        <img src="assets/images/projects/forecasting-viz.png" alt="Sales forecasting dashboard">
-                    </div>
-                    <p>Built an interactive dashboard that predicted quarterly sales within 4% margin of error.</p>
-                    <a href="portfolio.html#project2" class="project-link">View Details</a>
-                </div>
-            </article>
-        </div>
-        <div class="section-cta">
-            <a href="portfolio.html" class="button">See All Projects</a>
-        </div>
-    </section>
-
-    <section class="skills-overview">
-        <h2>Technical Toolkit</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Data Analysis</h3>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <span class="skill-name">SQL</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Excel/Google Sheets</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Data Visualization</h3>
-                <div class="skill-list">
-                    <div class="skill-item">
-                        <span class="skill-name">Tableau</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Power BI</span>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
+                <div class="about-text">
+                    <h3>Transforming Data into Actionable Insights</h3>
+                    <p>Welcome to my portfolio! I'm a data analyst specializing in transforming complex data into clear, actionable business intelligence. With expertise in SQL, Python, and data visualization, I help organizations make data-driven decisions.</p>
+                    <p>My approach combines strong technical skills with business acumen to deliver insights that drive real-world impact. I'm passionate about finding patterns in data that tell compelling stories and lead to meaningful business outcomes.</p>
                 </div>
             </div>
         </div>
-        <div class="section-cta">
-            <a href="skills.html" class="button">View All Skills</a>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skill-categories">
+                <div class="skill-category">
+                    <h3>Data Analysis</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>SQL</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Excel</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Statistical Analysis</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Data Visualization</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Tableau</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Power BI</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Data Storytelling</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>R</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Data Cleaning</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-cards">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Customer+Segmentation" alt="Customer Segmentation Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Retail Customer Segmentation Analysis</h3>
+                        <p>Identified 4 distinct customer segments leading to a 23% improvement in targeted campaign performance.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Tableau</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Sales+Forecasting" alt="Sales Forecasting Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sales Forecasting Dashboard</h3>
+                        <p>Built an interactive dashboard that predicted quarterly sales within 4% margin of error.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Power BI</span>
+                            <span class="project-tag">R</span>
+                            <span class="project-tag">Excel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400?text=Market+Analysis" alt="Market Analysis Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Market Basket Analysis</h3>
+                        <p>Applied association rule mining to identify product affinities, increasing cross-sell revenue by 15%.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">SQL</span>
+                            <span class="project-tag">Data Mining</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-options">
+                <div class="contact-option">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>your.email@example.com</p>
+                </div>
+                
+                <div class="contact-option">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://linkedin.com/in/yourprofile">yourprofile</a></p>
+                </div>
+                
+                <div class="contact-option">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Glorthur">Glorthur</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>Email: your.email@example.com</p>
-                <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">yourprofile</a></p>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="footer-col">
-                <h4>Site Map</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
             <p>&copy; 2025 Your Name. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="js/main.js"></script>
+    
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 60,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
