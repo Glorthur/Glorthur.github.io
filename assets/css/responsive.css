@@ -1,0 +1,49 @@
+/* Responsive Styles */
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    header, .hero, .featured-projects, .skills-overview {
+        padding: 2rem 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+}
