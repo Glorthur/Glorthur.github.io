@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gloria Arthur | Data Analyst Portfolio</title>
-    <meta name="description" content="Data Analysis specialist with expertise in SQL, Python, Tableau, and Power BI. View my projects, skills, and experience in data visualization and business intelligence.">
-    <meta name="keywords" content="data analyst, SQL, Python, PowerBI, data visualization, business intelligence, analytics portfolio">
-    <meta name="author" content="Gloria Arthur">
+    <title>Alex Rodriguez | Salesforce Platform Administrator</title>
+    <meta name="description" content="Certified Salesforce Platform Administrator with expertise in automation, integrations, and AI-powered solutions. Specializing in process optimization, user management, and business transformation.">
+    <meta name="keywords" content="salesforce administrator, salesforce platform, CRM, automation, integrations, einstein AI, workflow, process builder, apex, lightning">
+    <meta name="author" content="Alex Rodriguez">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         :root {
-            --primary: #1E3A8A;          /* Darker blue */
-            --primary-light: #2563EB;    /* Brighter blue */
-            --secondary: #10B981;        /* Emerald green */
-            --accent: #F59E0B;           /* Amber accent */
+            --primary: #00A1E0;          /* Salesforce blue */
+            --primary-light: #1B96FF;    /* Bright Salesforce blue */
+            --secondary: #16325C;        /* Salesforce dark blue */
+            --accent: #FFB75D;           /* Salesforce orange */
             --light: #F3F4F6;            /* Light gray background */
             --dark: #111827;             /* Near black */
             --text: #374151;             /* Dark gray text */
             --text-light: #6B7280;       /* Medium gray text */
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --highlight-bg: #ECFDF5;     /* Light green highlight background */
-            --highlight-text: #10B981;   /* Green highlight text */
+            --highlight-bg: #E8F4FD;     /* Light blue highlight background */
+            --highlight-text: #00A1E0;   /* Salesforce blue highlight text */
         }
         
         * {
@@ -277,6 +277,74 @@
         
         .skill-category:hover {
             transform: translateY(-5px);
+        }
+        
+        /* Certifications */
+        .certifications {
+            background-color: white;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .cert-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow);
+        }
+        
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 161, 224, 0.3);
+        }
+        
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        .cert-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .cert-issuer {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        
+        .cert-date {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 15px;
+            display: inline-block;
         }
         
         .skill-category h3 {
@@ -555,8 +623,8 @@
     <!-- Header -->
     <header id="top">
         <div class="container">
-            <h1>Gloria Arthur</h1>
-            <h2>Data Analyst & Insights Specialist</h2>
+            <h1>Alex Rodriguez</h1>
+            <h2>Certified Salesforce Platform Administrator</h2>
             <div class="datetime-display">
                 Current Time (UTC): 2025-03-12 21:05:07
             </div>
@@ -568,6 +636,7 @@
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -584,21 +653,21 @@
                     <img src="assets/images/profile.jpg" alt="Profile Photo">
                 </div>
                 <div class="about-text">
-                    <h3>Transforming Data into Actionable Insights</h3>
-                    <p>Welcome to my portfolio! I'm a <span class="highlight">data analyst</span> specializing in transforming complex data into clear, actionable business intelligence. With expertise in <span class="highlight">SQL</span>, <span class="highlight">Python</span>, and <span class="highlight">data visualization</span>, I help organizations make <span class="highlight">data-driven decisions</span>.</p>
-                    <p>My approach combines strong technical skills with business acumen to deliver insights that drive real-world impact. I'm passionate about finding patterns in data that tell compelling stories and lead to meaningful business outcomes.</p>
+                    <h3>Empowering Businesses Through Salesforce Excellence</h3>
+                    <p>Welcome to my portfolio! I'm a <span class="highlight">certified Salesforce Platform Administrator</span> specializing in optimizing business processes through intelligent automation and seamless integrations. With expertise in <span class="highlight">Lightning Platform</span>, <span class="highlight">Process Builder</span>, and <span class="highlight">Einstein AI</span>, I help organizations maximize their Salesforce investment.</p>
+                    <p>My approach combines technical proficiency with business strategy to deliver solutions that drive efficiency, improve user adoption, and accelerate growth. I'm passionate about transforming complex business requirements into elegant Salesforce solutions that empower teams to achieve more.</p>
                 </div>
             </div>
             
-            <!-- Data Stats - Changed to show only 2 cards -->
+            <!-- Salesforce Stats -->
             <div class="data-stats">
                 <div class="stat-card">
-                    <div class="stat-number">2+</div>
+                    <div class="stat-number">5+</div>
                     <div class="stat-label">Years Experience</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Projects Completed</div>
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Projects Delivered</div>
                 </div>
             </div>
             
@@ -615,25 +684,15 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-title-container">
-                <h2>Technical Skills</h2>
+                <h2>Core Competencies</h2>
             </div>
             <div class="skill-categories">
                 <div class="skill-category">
-                    <h3>Data Analysis</h3>
+                    <h3>Platform Administration</h3>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>SQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-bar">
-                        <div class="skill-name">
-                            <span>Excel</span>
+                            <span>Lightning Platform</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-level">
@@ -643,41 +702,7 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Statistical Analysis</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-bar">
-                        <div class="skill-name">
-                            <span>Hypothesis Testing</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Data Visualization</h3>
-                    
-                    <div class="skill-bar">
-                        <div class="skill-name">
-                            <span>Power BI</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-level">
-                            <div class="skill-percent" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-bar">
-                        <div class="skill-name">
-                            <span>Excel</span>
+                            <span>User Management</span>
                             <span>90%</span>
                         </div>
                         <div class="skill-level">
@@ -687,21 +712,95 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Data Storytelling</span>
+                            <span>Security & Permissions</span>
                             <span>92%</span>
                         </div>
                         <div class="skill-level">
                             <div class="skill-percent" style="width: 92%"></div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Programming</h3>
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>Python</span>
+                            <span>Data Management</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Automation & AI</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Flow Builder</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Process Builder</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Einstein AI Features</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 82%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Workflow Rules</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Development & Integration</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Apex Programming</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Lightning Web Components</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>REST/SOAP APIs</span>
                             <span>80%</span>
                         </div>
                         <div class="skill-level">
@@ -711,13 +810,93 @@
                     
                     <div class="skill-bar">
                         <div class="skill-name">
-                            <span>SQL</span>
-                            <span>90%</span>
+                            <span>Third-party Integrations</span>
+                            <span>85%</span>
                         </div>
                         <div class="skill-level">
-                            <div class="skill-percent" style="width: 90%"></div>
+                            <div class="skill-percent" style="width: 85%"></div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Analytics & Reporting</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Reports & Dashboards</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>Einstein Analytics</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-name">
+                            <span>SOQL/SOSL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-level">
+                            <div class="skill-percent" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-title-container">
+                <h2>Certifications & Credentials</h2>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-title">Salesforce Certified Administrator</div>
+                    <div class="cert-issuer">Salesforce</div>
+                    <div class="cert-date">Current</div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="cert-title">Platform App Builder</div>
+                    <div class="cert-issuer">Salesforce</div>
+                    <div class="cert-date">2024</div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-title">Einstein Analytics Plus</div>
+                    <div class="cert-issuer">Salesforce</div>
+                    <div class="cert-date">2024</div>
+                </div>
+                
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="cert-title">Advanced Administrator</div>
+                    <div class="cert-issuer">Salesforce</div>
+                    <div class="cert-date">In Progress</div>
                 </div>
             </div>
         </div>
@@ -730,64 +909,82 @@
                 <h2>Featured Projects</h2>
             </div>
             <div class="project-cards">
-                <!-- Project 1: HR Analytics Project with Embedded Graph -->
+                <!-- Project 1: Sales Process Automation -->
                 <div class="project-card">
                     <div class="project-image">
-                        <iframe class="project-iframe" src="https://visualize.graphy.app/view/a56cdba1-51ec-42e1-a796-5f26c5f355d3" allowfullscreen></iframe>
-                        <a href="https://visualize.graphy.app/view/a56cdba1-51ec-42e1-a796-5f26c5f355d3" target="_blank" class="view-full-graph">View Full Graph</a>
+                        <img src="https://via.placeholder.com/600x400/00A1E0/FFFFFF?text=Sales+Process+Automation" alt="Sales Process Automation Project">
                     </div>
                     <div class="project-content">
-                        <h3>HR Analytics: Exploratory Data Analysis</h3>
-                        <p>Conducted <span class="highlight">exploratory data analysis</span> on HR dataset to identify key factors affecting employee retention and performance.</p>
+                        <h3>Sales Process Automation & Lead Scoring</h3>
+                        <p>Implemented end-to-end <span class="highlight">sales process automation</span> using Flow Builder and Einstein Lead Scoring, resulting in <span class="highlight">40% increase</span> in qualified leads and <span class="highlight">25% reduction</span> in manual tasks.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Data Analysis</span>
-                            <span class="project-tag">Visualization</span>
+                            <span class="project-tag">Flow Builder</span>
+                            <span class="project-tag">Einstein AI</span>
+                            <span class="project-tag">Process Automation</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://valuable-rosehip-356.notion.site/HR-Analytics-Project-Exploratory-Data-Analysis-1b2a978668cd80f69e3ede7763763a91?pvs=4" target="_blank"><i class="fas fa-eye"></i> View Details</a>
-                            <a href="https://github.com/Glorthur/hr-analytics" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i> View Case Study</a>
+                            <a href="#" target="_blank"><i class="fab fa-salesforce"></i> Trailhead</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2: Workforce Patterns with Embedded Graph -->
+                <!-- Project 2: Service Cloud Implementation -->
                 <div class="project-card">
                     <div class="project-image">
-                        <iframe class="project-iframe" src="https://visualize.graphy.app/view/89e84b84-eaef-4350-8828-81391bb11a9b" allowfullscreen></iframe>
-                        <a href="https://visualize.graphy.app/view/89e84b84-eaef-4350-8828-81391bb11a9b" target="_blank" class="view-full-graph">View Full Graph</a>
+                        <img src="https://via.placeholder.com/600x400/16325C/FFFFFF?text=Service+Cloud+Setup" alt="Service Cloud Implementation">
                     </div>
                     <div class="project-content">
-                        <h3>Workforce Patterns and Trends Analysis</h3>
-                        <p>Analyzed <span class="highlight">workforce patterns</span> and identified emerging trends to help optimize resource allocation and staffing strategies.</p>
+                        <h3>Service Cloud Implementation & Case Management</h3>
+                        <p>Led complete <span class="highlight">Service Cloud implementation</span> with omnichannel routing, Knowledge Base integration, and automated escalation rules, improving customer satisfaction by <span class="highlight">35%</span>.</p>
                         <div class="project-tags">
-                            <span class="project-tag">DataCamp</span>
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Data Visualization</span>
+                            <span class="project-tag">Service Cloud</span>
+                            <span class="project-tag">Omnichannel</span>
+                            <span class="project-tag">Knowledge Base</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://www.datacamp.com/datalab/w/17113e5a-d6f2-4d24-9164-c4d878719f0c/edit" target="_blank"><i class="fas fa-eye"></i> View Details</a>
-                            <a href="https://github.com/Glorthur/workforce-analysis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i> View Details</a>
+                            <a href="#" target="_blank"><i class="fab fa-salesforce"></i> Architecture</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3 -->
+                <!-- Project 3: Data Migration & Integration -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="https://via.placeholder.com/600x400?text=Market+Analysis" alt="Online Retail Analysis Project">
+                        <img src="https://via.placeholder.com/600x400/FFB75D/000000?text=Data+Integration" alt="Data Migration Project">
                     </div>
                     <div class="project-content">
-                        <h3>Online Retail Analysis</h3>
-                        <p>Applied <span class="highlight">Customer LifeTime Value Analysis</span> to identify Valuable customers and those at risk to drive actionable insights <span class="highlight">15%</span>.</p>
+                        <h3>Multi-System Integration & Data Migration</h3>
+                        <p>Orchestrated seamless <span class="highlight">data migration</span> from legacy CRM to Salesforce, including real-time integrations with ERP and marketing automation systems via <span class="highlight">REST APIs</span>.</p>
                         <div class="project-tags">
-                            <span class="project-tag">Excel</span>
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Data Manipulation</span>
+                            <span class="project-tag">Data Migration</span>
+                            <span class="project-tag">REST APIs</span>
+                            <span class="project-tag">MuleSoft</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://www.notion.so/UCI-Online-Retail-Analysis-1c1a978668cd80f3820ed6f259d72afd" target="_blank"><i class="fas fa-eye"></i> View Details</a>
-                            <a href="https://github.com/Glorthur/Online_Retail_Analysis" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" target="_blank"><i class="fas fa-eye"></i> Migration Strategy</a>
+                            <a href="#" target="_blank"><i class="fas fa-code"></i> Integration Guide</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Einstein Analytics Dashboard -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/600x400/1B96FF/FFFFFF?text=Einstein+Analytics" alt="Einstein Analytics Dashboard">
+                    </div>
+                    <div class="project-content">
+                        <h3>Executive Analytics Dashboard with Einstein</h3>
+                        <p>Developed comprehensive <span class="highlight">Einstein Analytics dashboards</span> providing real-time business insights, predictive analytics, and automated reporting for C-level executives.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Einstein Analytics</span>
+                            <span class="project-tag">SAQL</span>
+                            <span class="project-tag">Business Intelligence</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fas fa-chart-bar"></i> Live Dashboard</a>
+                            <a href="#" target="_blank"><i class="fas fa-file-alt"></i> Documentation</a>
                         </div>
                     </div>
                 </div>
@@ -805,19 +1002,19 @@
                 <div class="contact-option">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p><a href="mailto:maamesi.b.arthur@gmail.com">maamesi.b.arthur@gmail.com</a></p>
+                    <p><a href="mailto:alex.rodriguez.sfdc@gmail.com">alex.rodriguez.sfdc@gmail.com</a></p>
                 </div>
                 
                 <div class="contact-option">
                     <i class="fab fa-linkedin"></i>
                     <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/gloria-arthur-536070150" target="_blank">Gloria Arthur</a></p>
+                    <p><a href="https://www.linkedin.com/in/alex-rodriguez-salesforce-admin" target="_blank">Alex Rodriguez</a></p>
                 </div>
                 
                 <div class="contact-option">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/Glorthur" target="_blank">Glorthur</a></p>
+                    <i class="fab fa-salesforce"></i>
+                    <h3>Trailhead</h3>
+                    <p><a href="https://trailblazer.me/id/alexrodriguezsfdc" target="_blank">Trailblazer Profile</a></p>
                 </div>
             </div>
         </div>
@@ -827,11 +1024,11 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/gloria-arthur-536070150" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Glorthur" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:maamesi.b.arthur@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/alex-rodriguez-salesforce-admin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://trailblazer.me/id/alexrodriguezsfdc" target="_blank"><i class="fab fa-salesforce"></i></a>
+                <a href="mailto:alex.rodriguez.sfdc@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>&copy; 2025 Gloria Arthur. All rights reserved.</p>
+            <p>&copy; 2025 Alex Rodriguez. All rights reserved.</p>
         </div>
     </footer>
     
