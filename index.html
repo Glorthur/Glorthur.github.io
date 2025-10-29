@@ -243,9 +243,92 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
+        /* Services / What I Can Do */
+        .services {
+            background-color: var(--light);
+        }
+        
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary-light));
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover .service-icon {
+            color: var(--secondary);
+            transform: scale(1.1);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin-top: 15px;
+        }
+        
+        .service-features li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
         /* Skills */
         .skills {
-            background-color: var(--light);
+            background-color: white;
         }
         
         .skill-categories {
@@ -541,6 +624,10 @@
                 grid-template-columns: 1fr;
             }
             
+            .service-cards {
+                grid-template-columns: 1fr;
+            }
+            
             .project-image {
                 height: 300px;
             }
@@ -567,6 +654,7 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">What I Can Do</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -607,6 +695,88 @@
                 <a href="assets/resume.pdf" download class="download-btn">
                     <i class="fas fa-file-download"></i> Download Resume
                 </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What I Can Do Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title-container">
+                <h2>What I Can Do</h2>
+            </div>
+            <div class="service-cards">
+                <div class="service-card">
+                    <i class="fas fa-chart-line service-icon"></i>
+                    <h3>Data Analysis & Insights</h3>
+                    <p>Transform raw data into actionable insights that drive business decisions and strategy.</p>
+                    <ul class="service-features">
+                        <li>Exploratory data analysis</li>
+                        <li>Statistical modeling</li>
+                        <li>Trend identification</li>
+                        <li>Business intelligence reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-database service-icon"></i>
+                    <h3>Database Management</h3>
+                    <p>Design, optimize, and query databases to efficiently extract and manage business-critical information.</p>
+                    <ul class="service-features">
+                        <li>Complex SQL queries</li>
+                        <li>Database optimization</li>
+                        <li>Data warehousing</li>
+                        <li>ETL processes</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-chart-bar service-icon"></i>
+                    <h3>Data Visualization</h3>
+                    <p>Create compelling visual stories from data using industry-leading tools and best practices.</p>
+                    <ul class="service-features">
+                        <li>Interactive dashboards</li>
+                        <li>Custom reports</li>
+                        <li>Tableau & Power BI</li>
+                        <li>Python visualizations</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-brain service-icon"></i>
+                    <h3>Predictive Analytics</h3>
+                    <p>Leverage machine learning and statistical methods to forecast trends and optimize outcomes.</p>
+                    <ul class="service-features">
+                        <li>Forecasting models</li>
+                        <li>Pattern recognition</li>
+                        <li>Risk assessment</li>
+                        <li>Optimization strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-users service-icon"></i>
+                    <h3>Customer Analytics</h3>
+                    <p>Understand customer behavior, segmentation, and lifetime value to improve marketing ROI.</p>
+                    <ul class="service-features">
+                        <li>Customer segmentation</li>
+                        <li>Churn analysis</li>
+                        <li>Lifetime value modeling</li>
+                        <li>Marketing attribution</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-tasks service-icon"></i>
+                    <h3>Process Automation</h3>
+                    <p>Streamline data workflows and automate repetitive tasks to increase efficiency and accuracy.</p>
+                    <ul class="service-features">
+                        <li>Python scripting</li>
+                        <li>Workflow automation</li>
+                        <li>Report automation</li>
+                        <li>Data pipeline development</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
