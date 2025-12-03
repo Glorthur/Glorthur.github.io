@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Metrics Mistakes - Infographic</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 22px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .mistakes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .mistake-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 35px;
+            border-left: 6px solid;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mistake-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .mistake-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: inherit;
+        }
+
+        .mistake-card.mistake-1 {
+            border-left-color: #e74c3c;
+        }
+
+        .mistake-card.mistake-1::before {
+            background: #e74c3c;
+        }
+
+        .mistake-card.mistake-2 {
+            border-left-color: #f39c12;
+        }
+
+        .mistake-card.mistake-2::before {
+            background: #f39c12;
+        }
+
+        .mistake-card.mistake-3 {
+            border-left-color: #3498db;
+        }
+
+        .mistake-card.mistake-3::before {
+            background: #3498db;
+        }
+
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .mistake-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .mistake-description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .examples {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 3px solid #ddd;
+        }
+
+        .examples-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .examples-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .examples-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #666;
+            font-size: 15px;
+        }
+
+        .examples-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #999;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .stat-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .header p {
+                font-size: 18px;
+            }
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .mistakes-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚠️ Common HR Metrics Mistakes</h1>
+            <p>Why HR Data Fails to Drive Business Decisions</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <p><strong>HR leaders often err by not aligning metrics with business goals, overloading reports with excessive data, and failing to provide context or stories behind the numbers.</strong></p>
+            </div>
+
+            <div class="mistakes-grid">
+                <div class="mistake-card mistake-1">
+                    <span class="icon">🎯</span>
+                    <h2 class="mistake-title">No Business Alignment</h2>
+                    <p class="mistake-description">
+                        HR metrics like time-to-fill or training hours get tracked without tying to revenue impacts or strategic priorities, making HR seem disconnected from company objectives.
+                    </p>
+                    <div class="examples">
+                        <div class="examples-title">Common Examples:</div>
+                        <ul class="examples-list">
+                            <li>Tracking time-to-fill without measuring quality impact</li>
+                            <li>Counting training hours without ROI analysis</li>
+                            <li>Measuring employee satisfaction without linking to performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mistake-card mistake-2">
+                    <span class="icon">📊</span>
+                    <h2 class="mistake-title">Data Overload</h2>
+                    <p class="mistake-description">
+                        Presenting too many metrics creates confusion, burying key insights under irrelevant details and reducing decision-making effectiveness.
+                    </p>
+                    <div class="examples">
+                        <div class="examples-title">Common Examples:</div>
+                        <ul class="examples-list">
+                            <li>Dashboards with 50+ metrics at once</li>
+                            <li>Monthly reports with pages of unrelated data</li>
+                            <li>No prioritization of critical vs. nice-to-have metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mistake-card mistake-3">
+                    <span class="icon">📖</span>
+                    <h2 class="mistake-title">Lacking Context</h2>
+                    <p class="mistake-description">
+                        Raw numbers without explanations of trends, causes, or implications mislead stakeholders, such as high turnover stats ignoring root factors like conditions or strategy.
+                    </p>
+                    <div class="examples">
+                        <div class="examples-title">Common Examples:</div>
+                        <ul class="examples-list">
+                            <li>High turnover rate without explaining why</li>
+                            <li>Absenteeism spikes without root cause analysis</li>
+                            <li>Performance metrics without industry benchmarks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>The Solution:</strong> Align metrics with business goals, focus on actionable insights, and always provide context behind the numbers.</p>
+        </div>
+    </div>
+</body>
+</html>
