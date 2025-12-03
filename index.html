@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR Metrics Mistakes - Infographic</title>
+    <title>Portfolio - Glorthur</title>
     <style>
         * {
             margin: 0;
@@ -11,270 +11,587 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 20px;
-            min-height: 100vh;
+        :root {
+            --primary-blue: #2563eb;
+            --dark-blue: #1e40af;
+            --light-blue: #3b82f6;
+            --accent-blue: #60a5fa;
+            --grey-900: #111827;
+            --grey-800: #1f2937;
+            --grey-700: #374151;
+            --grey-600: #4b5563;
+            --grey-500: #6b7280;
+            --grey-400: #9ca3af;
+            --grey-300: #d1d5db;
+            --grey-200: #e5e7eb;
+            --grey-100: #f3f4f6;
+            --grey-50: #f9fafb;
         }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--grey-50);
+            color: var(--grey-900);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--grey-900);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--grey-200);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            color: var(--grey-200);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background: var(--grey-100);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
+            padding: 0 2rem;
         }
 
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 50px 40px;
+        /* Section Styling */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
             text-align: center;
-        }
-
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            margin-bottom: 3rem;
+            color: var(--grey-900);
             font-weight: 700;
         }
 
-        .header p {
-            font-size: 22px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .content {
-            padding: 60px 40px;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 20px;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .mistakes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .mistake-card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 35px;
-            border-left: 6px solid;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mistake-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .mistake-card::before {
+        .section-title::after {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: inherit;
-        }
-
-        .mistake-card.mistake-1 {
-            border-left-color: #e74c3c;
-        }
-
-        .mistake-card.mistake-1::before {
-            background: #e74c3c;
-        }
-
-        .mistake-card.mistake-2 {
-            border-left-color: #f39c12;
-        }
-
-        .mistake-card.mistake-2::before {
-            background: #f39c12;
-        }
-
-        .mistake-card.mistake-3 {
-            border-left-color: #3498db;
-        }
-
-        .mistake-card.mistake-3::before {
-            background: #3498db;
-        }
-
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
             display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 1rem auto;
+            border-radius: 2px;
         }
 
-        .mistake-title {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-
-        .mistake-description {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        .examples {
+        /* About Section */
+        .about {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border-left: 3px solid #ddd;
         }
 
-        .examples-title {
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .examples-list {
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--grey-700);
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, var(--grey-300) 0%, var(--grey-400) 100%);
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--grey-600);
+            font-size: 1.2rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--grey-100);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+        }
+
+        .skill-card h3 {
+            color: var(--grey-900);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .skill-list {
             list-style: none;
-            padding-left: 0;
         }
 
-        .examples-list li {
-            padding: 8px 0;
-            padding-left: 25px;
+        .skill-list li {
+            padding: 0.5rem 0;
+            color: var(--grey-700);
             position: relative;
-            color: #666;
-            font-size: 15px;
+            padding-left: 1.5rem;
         }
 
-        .examples-list li::before {
-            content: '→';
+        .skill-list li::before {
+            content: '▸';
             position: absolute;
             left: 0;
-            color: #999;
+            color: var(--primary-blue);
             font-weight: bold;
         }
 
-        .footer {
-            background: #2c3e50;
+        /* Projects Section */
+        .projects {
+            background: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--grey-50);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--grey-200);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+        }
+
+        .project-image {
+            background: linear-gradient(135deg, var(--grey-400) 0%, var(--grey-500) 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 30px;
-            text-align: center;
-            font-size: 16px;
+            font-size: 1.1rem;
         }
 
-        .stat-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-card h3 {
+            color: var(--grey-900);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: var(--grey-600);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--grey-200);
+            color: var(--grey-700);
+            padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            margin: 5px;
-            font-size: 14px;
+            font-size: 0.875rem;
         }
 
+        .project-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: var(--dark-blue);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--grey-800);
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--grey-300);
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-blue);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--grey-900);
+            color: var(--grey-400);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 36px;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
-            .header p {
-                font-size: 18px;
+            .hero p {
+                font-size: 1.1rem;
             }
 
-            .content {
-                padding: 40px 20px;
-            }
-
-            .mistakes-grid {
+            .about-content {
                 grid-template-columns: 1fr;
-                gap: 30px;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 4rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>⚠️ Common HR Metrics Mistakes</h1>
-            <p>Why HR Data Fails to Drive Business Decisions</p>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Glorthur</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="content">
-            <div class="intro">
-                <p><strong>HR leaders often err by not aligning metrics with business goals, overloading reports with excessive data, and failing to provide context or stories behind the numbers.</strong></p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Developer | Designer | Problem Solver</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
+        </div>
+    </section>
 
-            <div class="mistakes-grid">
-                <div class="mistake-card mistake-1">
-                    <span class="icon">🎯</span>
-                    <h2 class="mistake-title">No Business Alignment</h2>
-                    <p class="mistake-description">
-                        HR metrics like time-to-fill or training hours get tracked without tying to revenue impacts or strategic priorities, making HR seem disconnected from company objectives.
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a passionate developer with a keen eye for design and a love for creating 
+                        innovative solutions. With expertise in modern web technologies, I bring ideas 
+                        to life through clean code and intuitive user experiences.
                     </p>
-                    <div class="examples">
-                        <div class="examples-title">Common Examples:</div>
-                        <ul class="examples-list">
-                            <li>Tracking time-to-fill without measuring quality impact</li>
-                            <li>Counting training hours without ROI analysis</li>
-                            <li>Measuring employee satisfaction without linking to performance</li>
-                        </ul>
-                    </div>
+                    <p>
+                        My journey in technology has been driven by curiosity and a commitment to 
+                        continuous learning. I enjoy tackling complex challenges and turning them 
+                        into elegant, user-friendly applications.
+                    </p>
+                    <p>
+                        When I'm not coding, you can find me exploring new technologies, contributing 
+                        to open-source projects, or sharing knowledge with the developer community.
+                    </p>
                 </div>
-
-                <div class="mistake-card mistake-2">
-                    <span class="icon">📊</span>
-                    <h2 class="mistake-title">Data Overload</h2>
-                    <p class="mistake-description">
-                        Presenting too many metrics creates confusion, burying key insights under irrelevant details and reducing decision-making effectiveness.
-                    </p>
-                    <div class="examples">
-                        <div class="examples-title">Common Examples:</div>
-                        <ul class="examples-list">
-                            <li>Dashboards with 50+ metrics at once</li>
-                            <li>Monthly reports with pages of unrelated data</li>
-                            <li>No prioritization of critical vs. nice-to-have metrics</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="mistake-card mistake-3">
-                    <span class="icon">📖</span>
-                    <h2 class="mistake-title">Lacking Context</h2>
-                    <p class="mistake-description">
-                        Raw numbers without explanations of trends, causes, or implications mislead stakeholders, such as high turnover stats ignoring root factors like conditions or strategy.
-                    </p>
-                    <div class="examples">
-                        <div class="examples-title">Common Examples:</div>
-                        <ul class="examples-list">
-                            <li>High turnover rate without explaining why</li>
-                            <li>Absenteeism spikes without root cause analysis</li>
-                            <li>Performance metrics without industry benchmarks</li>
-                        </ul>
-                    </div>
+                <div class="about-image">
+                    [Your Photo or Illustration]
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <p><strong>The Solution:</strong> Align metrics with business goals, focus on actionable insights, and always provide context behind the numbers.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React & Vue.js</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>Python</li>
+                        <li>Database Design</li>
+                        <li>API Development</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools & Others</h3>
+                    <ul class="skill-list">
+                        <li>Git & Version Control</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Cloud Services</li>
+                        <li>UI/UX Design</li>
+                        </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Project Image</div>
+                    <div class="project-content">
+                        <h3>Project Title 1</h3>
+                        <p>A brief description of your project, highlighting key features and technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Project Image</div>
+                    <div class="project-content">
+                        <h3>Project Title 2</h3>
+                        <p>A brief description of your project, highlighting key features and technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">Project Image</div>
+                    <div class="project-content">
+                        <h3>Project Title 3</h3>
+                        <p>A brief description of your project, highlighting key features and technologies used.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title" style="color: white;">Get In Touch</h2>
+                <p>
+                    I'm always open to discussing new projects, creative ideas, or opportunities 
+                    to be part of your vision. Feel free to reach out!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:your.email@example.com" class="contact-link">Email Me</a>
+                    <a href="https://github.com/Glorthur" class="contact-link">GitHub</a>
+                    <a href="https://linkedin.com/in/yourprofile" class="contact-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Glorthur. All rights reserved.</p>
+    </footer>
 </body>
 </html>
