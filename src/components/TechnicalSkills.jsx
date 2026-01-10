@@ -3,8 +3,8 @@ import './TechnicalSkills.css';
 
 const TechnicalSkills = () => {
     const skills = [
-        'SQL', 'Python', 'Power BI', 'Excel', 'Salesforce CRM', 'HRIS',
-        'Google Workspace', 'Microsoft Office', 'Trello', 'Canva',
+        'SQL', 'Python', 'Python Scripting & Automation', 'Power BI', 'Excel', 'Salesforce CRM', 'HRIS',
+        'Google Workspace', 'Microsoft Office', 'Notion', 'Trello', 'Canva',
         'Data Visualization', 'Statistical Analysis', 'Process Automation',
         'Data Analysis', 'HR Analytics', 'Worldplay CRM'
     ];
