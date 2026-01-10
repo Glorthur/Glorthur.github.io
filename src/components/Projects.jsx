@@ -5,6 +5,14 @@ import './Projects.css';
 const Projects = () => {
     const projects = [
         {
+            title: 'Employee Attrition Diagnostic Analysis',
+            description: 'Data-driven investigation into employee turnover patterns using SQL diagnostic analysis. Discovered that overtime multiplies attrition risk by 3x, and that YearsSinceLastPromotion=0 means "Never Promoted" (not recently promoted). Built an interactive dashboard visualizing risk factors across 1,470 employees with a validated risk scoring model.',
+            tags: ['SQL', 'Data Analysis', 'HR Analytics', 'Dashboard', 'Data Cleaning'],
+            github: 'https://github.com/Glorthur/Employee-Attrition-Analysis',
+            live: 'https://glorthur.github.io/Employee-Attrition-Analysis/dashboard.html',
+            imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&q=90'
+        },
+        {
             title: 'HR Performance Intelligence: From Data to Decision Making',
             description: 'Comprehensive HR analytics project analyzing 497,000+ employee records to uncover workforce patterns and cost drivers. Through SQL and Power BI, identified a $32.5M–$130M cost avoidance opportunity by addressing an 87% operational turnover concentration and $7,000 systematic pay gap. Delivers executive-ready insights with quantified business impact, tiered action plans, and strategic recommendations.',
             tags: ['SQL', 'Power BI', 'HR Analytics', 'Data Analysis'],
