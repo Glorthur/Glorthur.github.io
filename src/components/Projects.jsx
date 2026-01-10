@@ -37,14 +37,6 @@ const Projects = () => {
             imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1920&h=1080&fit=crop&q=90'
         },
         {
-            title: 'Workforce Patterns and Trends Analysis',
-            description: 'Analyzed workforce patterns and identified emerging trends to help optimize resource allocation and staffing strategies. Applied SQL queries and data visualization techniques to support strategic HR decision-making.',
-            tags: ['SQL', 'Data Visualization', 'HR Analytics', 'DataCamp'],
-            github: 'https://github.com/Glorthur/workforce-analysis',
-            live: 'https://www.datacamp.com/datalab/w/17113e5a-d6f2-4d24-9164-c4d878719f0c/edit',
-            graphUrl: 'https://visualize.graphy.app/view/89e84b84-eaef-4350-8828-81391bb11a9b'
-        },
-        {
             title: 'HR Analytics: Exploratory Data Analysis',
             description: 'Conducted exploratory data analysis on HR dataset to identify key factors affecting employee retention and performance. Utilized Python for data analysis and visualization to uncover patterns and trends.',
             tags: ['Python', 'Data Analysis', 'Visualization', 'HR Analytics'],
