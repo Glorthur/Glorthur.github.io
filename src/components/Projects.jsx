@@ -6,7 +6,7 @@ const Projects = () => {
     const projects = [
         {
             title: 'Employee Attrition Diagnostic Analysis',
-            description: 'Data-driven investigation into employee turnover patterns using SQL diagnostic analysis. Discovered that overtime multiplies attrition risk by 3x, and that YearsSinceLastPromotion=0 means "Never Promoted" (not recently promoted). Built an interactive dashboard visualizing risk factors across 1,470 employees with a validated risk scoring model.',
+            description: 'Data-driven investigation into employee turnover using SQL. Discovered overtime multiplies attrition risk by 3x. Built an interactive dashboard visualizing risk factors across 1,470 employees with a validated scoring model.',
             tags: ['SQL', 'Data Analysis', 'HR Analytics', 'Dashboard', 'Data Cleaning'],
             github: 'https://github.com/Glorthur/Employee-Attrition-Analysis',
             live: 'https://glorthur.github.io/Employee-Attrition-Analysis/dashboard.html',
