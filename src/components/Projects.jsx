@@ -10,7 +10,7 @@ const Projects = () => {
             tags: ['SQL', 'Data Analysis', 'HR Analytics', 'Dashboard', 'Data Cleaning'],
             github: 'https://github.com/Glorthur/Employee-Attrition-Analysis',
             live: 'https://glorthur.github.io/Employee-Attrition-Analysis/dashboard.html',
-            imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop&q=90'
+            imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&h=1080&fit=crop&q=90'
         },
         {
             title: 'HR Performance Intelligence: From Data to Decision Making',
