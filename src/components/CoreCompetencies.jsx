@@ -3,23 +3,24 @@ import './CoreCompetencies.css';
 
 const CoreCompetencies = () => {
     const competencies = [
-        'Strategic HR Management',
+        // Data Analytics
+        'SQL & Data Querying',
+        'Data Analysis & Visualization',
+        'HR Analytics',
+        'Dashboard Development',
+        'Power BI',
+        'Data Cleaning & Preparation',
+        // HR & People Ops
         'People Strategy',
-        'HR Policies & Procedures',
-        'Organizational Development',
         'Talent Management',
-        'Recruitment & Onboarding',
+        'Employee Retention Analysis',
+        'Workforce Planning',
         'Performance Management',
-        'Employee Relations',
-        'HR Operations',
-        'Payroll & Benefits Administration',
-        'HR Compliance',
+        'Employee Experience',
         'HRIS Management',
-        'Leadership & Team Management',
-        'Employee Engagement',
-        'Excellent Communication',
-        'Stakeholder Advisory',
-        'Problem Solving'
+        'Compensation Analysis',
+        'Stakeholder Communication',
+        'Data-Driven Decision Making'
     ];
 
     return (
