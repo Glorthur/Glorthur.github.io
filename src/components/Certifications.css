@@ -1,0 +1,61 @@
+.certifications-section {
+    background-color: var(--bg-dark);
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certification-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.certification-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border);
+    transform: translateY(-2px);
+}
+
+.cert-name {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cert-issuer {
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.cert-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .certification-card {
+        padding: 1.25rem;
+    }
+    
+    .cert-name {
+        font-size: 1rem;
+    }
+}
