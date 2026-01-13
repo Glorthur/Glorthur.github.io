@@ -5,20 +5,20 @@ import './Projects.css';
 const Projects = () => {
     const projects = [
         {
-            title: 'EliMax Group Solar - Salesforce Sales & Service Cloud Implementation',
-            description: 'End-to-end Salesforce implementation for a solar energy company addressing sales inefficiencies and support challenges. Built validation rules for data quality, formula-based lead scoring, regional price books with multi-currency support, tiered case routing with SLA tracking, and a Case Deflection Flow that can reduce support tickets by 30-40%. Includes Experience Cloud Help Center with Knowledge Base integration.',
-            tags: ['Salesforce', 'Sales Cloud', 'Service Cloud', 'Experience Cloud', 'Screen Flows', 'Process Automation'],
-            github: 'https://github.com/Glorthur/elimax-salesforce-portfolio',
-            live: 'https://glorthur.github.io/elimax-salesforce-portfolio/',
-            imageUrl: 'https://raw.githubusercontent.com/Glorthur/elimax-salesforce-portfolio/main/screenshots/dashboard.png'
-        },
-        {
             title: 'Employee Attrition Diagnostic Analysis',
             description: 'Diagnostic analysis of employee attrition patterns across 1,470 records using SQL. Identified overtime as the strongest risk factor, multiplying attrition rates by 3x regardless of other conditions. Analyzed compensation patterns and found employees receiving low salary hikes after promotion showed significantly higher turnover. Developed a weighted risk scoring model combining multiple factors and built an interactive dashboard to visualize high-risk segments for targeted retention efforts.',
             tags: ['SQL', 'Data Analysis', 'HR Analytics', 'Dashboard', 'Data Cleaning'],
             github: 'https://github.com/Glorthur/Employee-Attrition-Analysis',
             live: 'https://glorthur.github.io/Employee-Attrition-Analysis/dashboard.html',
             imageUrl: 'https://raw.githubusercontent.com/Glorthur/Employee-Attrition-Analysis/main/dashboard-preview.png'
+        },
+        {
+            title: 'EliMax Group Solar - Salesforce Sales & Service Cloud Implementation',
+            description: 'End-to-end Salesforce implementation for a solar energy company addressing sales inefficiencies and support challenges. Built validation rules for data quality, formula-based lead scoring, regional price books with multi-currency support, tiered case routing with SLA tracking, and a Case Deflection Flow that can reduce support tickets by 30-40%. Includes Experience Cloud Help Center with Knowledge Base integration.',
+            tags: ['Salesforce', 'Sales Cloud', 'Service Cloud', 'Experience Cloud', 'Screen Flows', 'Process Automation'],
+            github: 'https://github.com/Glorthur/elimax-salesforce-portfolio',
+            live: 'https://glorthur.github.io/elimax-salesforce-portfolio/',
+            imageUrl: 'https://raw.githubusercontent.com/Glorthur/elimax-salesforce-portfolio/main/screenshots/dashboard.png'
         },
         {
             title: 'HR Performance Intelligence: From Data to Decision Making',
