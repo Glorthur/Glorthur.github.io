@@ -15,7 +15,7 @@ const Experience = () => {
             role: 'Agile People Operations Leader',
             company: 'Culturelligence',
             location: 'Remote',
-            period: 'Jun 2025 - Present',
+            period: 'Jun 2025 - Feb 2026',
             description: 'Recruited and onboarded new hires for a remote, international team, ensuring smooth integration into company workflows. Conducted research on modern Talent Management and HR practices, and presented actionable insights to the leadership team. Led the in-house implementation of new HR processes and practices, aligning workflows with Agile PeopleOps methods. Applied Kanban tools to map workflows, with exposure to the Agile PeopleOps Framework™ for HR innovation.'
         },
         {
