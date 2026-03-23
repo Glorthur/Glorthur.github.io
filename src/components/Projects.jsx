@@ -21,6 +21,14 @@ const Projects = () => {
             imageUrl: 'https://raw.githubusercontent.com/Glorthur/elimax-salesforce-portfolio/main/screenshots/dashboard.png'
         },
         {
+            title: 'NovaMart - Salesforce Customer Loyalty Platform',
+            description: 'Full Salesforce loyalty program implementation for a retail chain tackling 23% annual customer churn. Built a four-tier rewards system with automated point calculations, tier upgrades via record-triggered flows, and a self-service Experience Cloud portal for members. Includes 6 custom objects, validation rules, duplicate management, scheduled flows for point expiry, and executive dashboards tracking program ROI.',
+            tags: ['Salesforce', 'Experience Cloud', 'Record-Triggered Flows', 'Custom Objects', 'Loyalty Program', 'Process Automation'],
+            github: 'https://github.com/Glorthur/novamart-salesforce-portfolio',
+            live: 'https://glorthur.github.io/novamart-salesforce-portfolio/',
+            imageUrl: 'https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=1920&h=1080&fit=crop&q=90'
+        },
+        {
             title: 'HR Performance Intelligence: From Data to Decision Making',
             description: 'Comprehensive HR analytics project analyzing 497,000+ employee records to uncover workforce patterns and cost drivers. Through SQL and Power BI, identified a $32.5M–$130M cost avoidance opportunity by addressing an 87% operational turnover concentration and $7,000 systematic pay gap. Delivers executive-ready insights with quantified business impact, tiered action plans, and strategic recommendations.',
             tags: ['SQL', 'Power BI', 'HR Analytics', 'Data Analysis'],
